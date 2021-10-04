@@ -20,3 +20,5 @@ if __name__ == "__main__":
 
     # We build the doc folder passed in the inputs.
     action.build_all_docs(github_env, [os.environ.get("INPUT_DOCS-FOLDER")])
+    print("Fixing permissions on _build folder")
+    os.system('chmod -R 777 docs/_build')
